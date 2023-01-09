@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>Match records</title>
+</head>
+
+<body>
+<table border=1>
+
+    <thead>
+    <td>Player Name</td>
+    <td>Score</td>
+    <td>Kills</td>
+    <td>Assists</td>
+    <td>Deaths</td>
+    <td>Won(input 1)/Lost(input 0)</td>
+    </thead>
+
+    {% for row in rows %}
+    <tr>
+        <td>{{row["player_name"]}}</td>
+        <td>{{row["game_score"]}}</td>
+        <td>{{row["kills"]}}</td>
+        <td>{{row['assists']}}</td>
+        <td>{{row['deaths']}}</td>
+        <td>{{row['won_or_lost']}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+
+<table border=1>
+    <thead>
+    <td>KD</td>
+    <td>WL</td>
+    </thead>
+
+    <tr>
+        <td> {{kd}} </td>
+        <td> {{wl}} </td>
+    </tr>
+</table>
+
+<!--<h2><a href = "/remove_record">Delete last record </a></h2>-->
+
+<form action="/remove_record">
+    <input type="submit" value="Delete last record" />
+</form>
+
+
+<h2><a href="/home">Go back to home page</a></h2>
+</body>
+</html>

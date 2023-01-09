@@ -1,0 +1,44 @@
+<html>
+<body>
+<form action="{{ url_for('add_record') }}" method="POST">
+
+    <h3> Match record</h3>
+
+    Player name
+    <br>
+    <input type='text' name="player_name"/>
+    <br>
+
+    Game score
+    <br>
+    <input type='number' name="game_score"/>
+    <br>
+
+    Kills
+    <br>
+    <input type='number' name="kills"/>
+    <br>
+
+    Assists
+    <br>
+    <input type='number' name="assists"/>
+    <br>
+
+    Deaths
+    <br>
+    <input type='number' name="deaths"/>
+    <br>
+
+    Won/Lost
+    <br>
+    <input type='number' name="won_or_lost"/>
+    <br>
+
+    <br>
+    <input type="submit" value="Record match"/>
+
+
+    <h2><a href="/home">Go back to home page</a></h2>
+</form>
+</body>
+</html>
